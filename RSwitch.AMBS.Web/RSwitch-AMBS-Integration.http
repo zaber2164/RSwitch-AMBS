@@ -1,0 +1,6 @@
+@RSwitch_AMBS_Integration_HostAddress = http://localhost:5147
+
+GET {{RSwitch_AMBS_Integration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
