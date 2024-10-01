@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<BusinessMessage>
+    <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+        <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+                <ds:Reference URI="#996fca06-db08-41ab-835a-721578ba49d4">
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>RADJV+HXE14zRuxjFibcyU5UOIYsV1a9p74W+DnErNc=</ds:DigestValue>
+                </ds:Reference>
+                <ds:Reference URI="">
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>cehRxP8BxyK5Xo+ozB3HDMQIlNBDLP5WAEo5sBLry4E=</ds:DigestValue>
+                </ds:Reference>
+                <ds:Reference>
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>KeTI9ZiUtajyjO08YeojoZwNpDLQNugXTsuhwt5SlAg=</ds:DigestValue>
+                </ds:Reference>
+            </ds:SignedInfo>Confidential
+            <ds:SignatureValue>tkf/dgPjOLjpqW0lCOgTEK8qK7PaytlzK3/ncCEpPb/GPY+0GRBhqL+T3+MM4dVAxd067si32Ppm
+knKH9gPJb5o5zahP1nkjIAFoTjvrqfKe0Jw99ScFzWsVG1yDBJiNlRyiBQbgyQAH5Ms7dFrZSOvD
+/1mKRKLu5+jjzlWtVz/0casJEUerCPQEGCgwlr8hZDiALEPAXfNzszXEUq2XQY9eqH2rrWNjxNnC
+N5e/EYynNRcjCyQeIMVur6jd6SzMzlW1C0TzfN/eeSKlZVdEy+MaMMZVh9Ovjhaiu04YCq/PbAKF
+8tjMAxzFO2SGj2npMqPQ7lBQAwyElKIKWHyV6w==</ds:SignatureValue>
+            <ds:KeyInfo Id="996fca06-db08-41ab-835a-721578ba49d4">
+                <ds:KeyValue>
+                    <ds:RSAKeyValue>
+                        <ds:Modulus>uUFRZyRC6kM4HS5yS4tL8VhvnoWMxvu+yoCyiZXJEhcXqY0DY1hD2Dcy8NOOsprJ4dZlqxcqYZEq
+ElC1q1IHmuZk4BVIMWqglZMKfVsYmYOSB0OrT1Crlhm/1y25IqTmDKISa2itHghFP/VXK8bkWQao
+d6MYOnnEjNFwPUGF+TPEEu5cFS/LNyET4QpxhY9ZzOszLLWXjbxksEpqtvIjj+COj/xgPTwzWcwv
+MmJm4f3o5b3Ez5GMHZK7AV1vi4Dt3UlbraFUWXSjMMZ4b3Jbjg3qGvDemNyLbZyoQGTkbT//3DOa
+2YLYyd8ncHjotuMjY8ihLK2gA17S0p8Sho622Q==</ds:Modulus>
+                        <ds:Exponent>AQAB</ds:Exponent>
+                    </ds:RSAKeyValue>
+                </ds:KeyValue>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIID/zCCAuegAwIBAgIBBTANBgkqhkiG9w0BAQsFADCBjDELMAkGA1UEBhMCUlcxDzANBgNVBAgT
+BktpZ2FsaTELMAkGA1UEBxMCUlcxEDAOBgNVBAoTB1JTd2l0Y2gxDzANBgNVBAsTBlItTkRQUzEW
+MBQGA1UEAxMNUi1ORFBTIFNVQiBDQTEkMCIGCSqGSIb3DQEJARYVaW5mb3NlY0Byc3dpdGNoLmNv
+LnJ3MB4XDTE5MTAwNzA4NTEwMFoXDTI0MTAwNzA4NTEwMFowgZwxCzAJBgNVBAYTAlJXMQ8wDQYD
+VQQIEwZLaWdhbGkxDzANBgNVBAcTBktpZ2FsaTEUMBIGA1UEChMLUlN3aXRjaCBMdGQxFjAUBgNV
+BAsTDUlUIERlcGFydG1lbnQxGjAYBgNVBAMTEUludGVncmF0aW9uIExheWVyMSEwHwYJKoZIhvcN
+AQkBFhJpbmZvQHJzd2l0Y2guY28ucncwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5
+QVFnJELqQzgdLnJLi0vxWG+ehYzG+77KgLKJlckSFxepjQNjWEPYNzLw046ymsnh1mWrFyphkSoS
+ULWrUgea5mTgFUgxaqCVkwp9WxiZg5IHQ6tPUKuWGb/XLbkipOYMohJraK0eCEU/9VcrxuRZBqh3
+oxg6ecSM0XA9QYX5M8QS7lwVL8s3IRPhCnGFj1nM6zMstZeNvGSwSmq28iOP4I6P/GA9PDNZzC8y
+Ymbh/ejlvcTPkYwdkrsBXW+LgO3dSVutoVRZdKMwxnhvcluODeoa8N6Y3IttnKhAZORtP//cM5rZ
+gtjJ3ydweOi24yNjyKEsraADXtLSnxKGjrbZAgMBAAGjWjBYMAkGA1UdEwQCMAAwHQYDVR0OBBYE
+FBfCLyY6cAjbHtZ+5sOgrE+jbR2JMB8GA1UdIwQYMBaAFBA/2uMlpd8NUn2CZlXSrD6H/sMiMAsG
+A1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEATOUOuX+8U0MmZeY2sGZ6yMsSFtk4WGBpldSp
+OJh6PJqt68LoUdzEgPeVqI9r/WobmQxet6J04ILrMbkXqAXWN6bQ8yHEk7U6YP0CZuT3ti9yfKxK
+hXKym6f0/zcNvYzoa5Mi0XCMoX5iPFLSoBWvT8o7pDoX/m+xMkXlQGUsVu9b+ILudaz5lYXg2+tT
+ol3fQWx5ccf/KeEEoTDthLWUOkLmwyTHHS1JDPc5tOMZvAY5epJbBwB6MeO6SF/5y+nmbW/O/iN9
+LKbtyZzKR5Li7c7+lvs61W3XezCuvgBzX6+R7QEH7RRL+fztfWdKp9cKEa62F9vudqkBbpxQMC88
+9Q==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </ds:Signature>
+    </AppHdr>
+    <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08 pacs.008.001.08.xsd">
+        <FIToFICstmrCdtTrf>
+            <GrpHdr>
+                <MsgId>RNDPS/4c0c3c56698f785dee7b2</MsgId>
+                <CreDtTm>2019-10-16T11:30:53+02:00</CreDtTm>
+                <NbOfTxs>1</NbOfTxs>
+                <SttlmInf>
+                    <SttlmMtd>INDA</SttlmMtd>
+                </SttlmInf>
+                <InstgAgt>
+                    <FinInstnId>
+                        <Othr>
+                            <Id>040</Id>
+                        </Othr>
+                    </FinInstnId>
+                </InstgAgt>Confidential
+                <InstdAgt>
+                    <FinInstnId>
+                        <Othr>
+                            <Id>130</Id>
+                        </Othr>
+                    </FinInstnId>
+                </InstdAgt>
+            </GrpHdr>
+            <CdtTrfTxInf>
+                <PmtId>
+                    <InstrId>RNDPS/191010-FICT/RWF/130/04</InstrId>
+                    <EndToEndId>ABC/0404/2019-10-10</EndToEndId>
+                    <TxId>191010000004</TxId>
+                </PmtId>
+                <PmtTpInf>
+                    <CtgyPurp>
+                        <Cd>000</Cd>
+                    </CtgyPurp>
+                </PmtTpInf>
+                <IntrBkSttlmAmt Ccy="RWF">5000.00</IntrBkSttlmAmt>
+                <IntrBkSttlmDt>2019-10-17</IntrBkSttlmDt>
+                <ChrgBr>SHAR</ChrgBr>
+                <InitgPty>
+                    <Nm>Bank of Kigali</Nm>
+                    <Id>
+                        <OrgId>
+                            <Othr>
+                                <Id>12</Id>
+                                <SchmeNm>
+                                    <Cd>CHAN</Cd>
+                                </SchmeNm>
+                            </Othr>
+                        </OrgId>
+                    </Id>
+                </InitgPty>
+                <Dbtr>
+                    <Nm>Mike Tango</Nm>
+                </Dbtr>
+                <DbtrAcct>
+                    <Id>
+                        <Othr>
+                            <Id>000400078911111</Id>
+                        </Othr>
+                    </Id>
+                </DbtrAcct>
+                <DbtrAgt>
+                    <FinInstnId>
+                        <Othr>
+                            <Id>040</Id>
+                        </Othr>
+                    </FinInstnId>
+                </DbtrAgt>
+                <CdtrAgt>
+                    <FinInstnId>
+                        <Othr>
+                            <Id>130</Id>
+                        </Othr>
+                    </FinInstnId>
+                </CdtrAgt>
+                <Cdtr>
+                    <Nm>Mike Tango</Nm>Confidential
+                </Cdtr>
+                <CdtrAcct>
+                    <Id>
+                        <Othr>
+                            <Id>000400078911122</Id>
+                        </Othr>
+                    </Id>
+                </CdtrAcct>
+                <Purp>
+                    <Cd>GDDS</Cd>
+                </Purp>
+                <RmtInf>
+                    <Ustrd>Testing pacs008 - clearing transaction</Ustrd>
+                    <Strd>
+                        <RfrdDocInf>
+                            <Tp>
+                                <CdOrPrtry>
+                                    <Cd>CINV</Cd>
+                                </CdOrPrtry>
+                            </Tp>
+                            <Nb>191010000004</Nb>
+                            <RltdDt>2019-10-16</RltdDt>
+                        </RfrdDocInf>
+                    </Strd>
+                </RmtInf>
+            </CdtTrfTxInf>
+        </FIToFICstmrCdtTrf>
+    </Document>
+</BusinessMessage>

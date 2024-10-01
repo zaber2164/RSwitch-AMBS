@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BusinessMessage>
+    <AppHdr xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+        <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+                <ds:Reference URI="#c0f13e44-6a66-4daf-8fb2-d8f6aa2bd6e0">
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>ytWOVGQ25r4ozd2cjhP+6O6UFlFWqe9nDUfJrl94qMQ=</ds:DigestValue>
+                </ds:Reference>
+                <ds:Reference URI="">
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>Z1DgKV/Vyf5zaYnJT5iiX4M5QrMaxRrfFFOr/e/9v7c=</ds:DigestValue>
+                </ds:Reference>
+                <ds:Reference>
+                    <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    </ds:Transforms>
+                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                    <ds:DigestValue>gqScYPaw7nBKrLDFDH+394nNklSTVCiYAE/abKDSxiQ=</ds:DigestValue>Confidential
+                </ds:Reference>
+            </ds:SignedInfo>
+            <ds:SignatureValue>LWEaP1ZnhD3DhQCHdFYlK6FUYEAffZbiSARoc7GngDQnFaqDGjHXKCru+rtKrPchmjbe1xNzuwX2
+XzepZ/YMKplXCCnsavgtlT32rp0Bd4bDHh4l0gP6ORsLLqa3QTVeg08d73u+OwJiZbmbSYBbFKKS
+j1cGF+j+szKmuASOn7E26ET2TtozlX7o2yL/OD2YRN9gsNCk2sTGkFNRp/8dkAiOQNOIvoKKnwRc
+XSd8wbY6AdZY3myfh4mmC2aUvtb20/OH2QYem7nNZJje5n0YRTwWjKNahDwpq/minoZzYnqN1jPn
+pKX6XmptLKm62wBWYQaWD6CgnKGC7juBHDDsmg==</ds:SignatureValue>
+            <ds:KeyInfo Id="c0f13e44-6a66-4daf-8fb2-d8f6aa2bd6e0">
+                <ds:KeyValue>
+                    <ds:RSAKeyValue>
+                        <ds:Modulus>3FArd3r8nUyd4/mydPxTF6CKdotl0IcQt9mU2dZhQ7ooQfToJExXMEVh0KT97rm/RhERoSw5kAdi
+9gA6y6TPuveMlaoP484klN1t5ngx1x4s7lDjar1FlrrxZemXbtnbIWyaqYBXtzP9ByCgbO+aCZ+w
+uSfS/+5BA2RzlFW/uIEAmnwlbyhti2EV6RU3ujRjf2qAKJMawGsaHNe0DOS6afFqUL5I7tFSSu3V
+VVM36l8XDJbjywaP9ojcCxJmTBF9FRYvNTBHlALb9dbBzLDbfeqHbUfLtyeJExUEgLr2+cACgQ3N
+czw0FAY8B629RSeK3IBMGVqHzcBGC4qzkbf5hQ==</ds:Modulus>
+                        <ds:Exponent>AQAB</ds:Exponent>
+                    </ds:RSAKeyValue>
+                </ds:KeyValue>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIID7zCCAtegAwIBAgIBBDANBgkqhkiG9w0BAQsFADCBjDELMAkGA1UEBhMCUlcxDzANBgNVBAgT
+BktpZ2FsaTELMAkGA1UEBxMCUlcxEDAOBgNVBAoTB1JTd2l0Y2gxDzANBgNVBAsTBlItTkRQUzEW
+MBQGA1UEAxMNUi1ORFBTIFNVQiBDQTEkMCIGCSqGSIb3DQEJARYVaW5mb3NlY0Byc3dpdGNoLmNv
+LnJ3MB4XDTE5MDEwMTEzMjYwMFoXDTI5MDEwMTEzMjYwMFowgYkxCzAJBgNVBAYTAlJXMQ8wDQYD
+VQQIEwZLaWdhbGkxCzAJBgNVBAcTAlJXMRAwDgYDVQQKEwdSU3dpdGNoMQ8wDQYDVQQLEwZSLU5E
+UFMxEzARBgNVBAMTClItTkRQUyBQR1cxJDAiBgkqhkiG9w0BCQEWFWluZm9zZWNAcnN3aXRjaC5j
+by5ydzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANxQK3d6/J1MneP5snT8UxeginaL
+ZdCHELfZlNnWYUO6KEH06CRMVzBFYdCk/e65v0YREaEsOZAHYvYAOsukz7r3jJWqD+POJJTdbeZ4
+MdceLO5Q42q9RZa68WXpl27Z2yFsmqmAV7cz/QcgoGzvmgmfsLkn0v/uQQNkc5RVv7iBAJp8JW8o
+bYthFekVN7o0Y39qgCiTGsBrGhzXtAzkumnxalC+SO7RUkrt1VVTN+pfFwyW48sGj/aI3AsSZkwR
+fRUWLzUwR5QC2/XWwcyw233qh21Hy7cniRMVBIC69vnAAoENzXM8NBQGPAetvUUnityATBlah83A
+RguKs5G3+YUCAwEAAaNdMFswDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUmkiJWrn4Rb2XcqjdsYcQ
+Uvml/4wwHwYDVR0jBBgwFoAUED/a4yWl3w1SfYJmVdKsPof+wyIwCwYDVR0PBAQDAgeAMA0GCSqG
+SIb3DQEBCwUAA4IBAQANG3GbMsjX9I4dNe7YIyhv6YzeDIOgq07KdHm0cv9nFBQ0SpX4Zhx/7xRL
+OTuY+vjH68qUXp+cJ18D+LBOOBuO6CyTO8I/9E4ynHEmLP6WOBbok6Qpsq5qsTwgXjcBC1PI37oT
+ref0XpDUgBcMZcEXScwfD3g6cpxkx2qO4pSDYFm00zs+4/I0/ts9DQmEnza9+/kwAZkugTWV2cjd
+cMStohl4x5pui8IYkqTwyDch6D7Q6UbAVJUEkFJHaGFweP7OKW9Tsyqm/YjuYWqF1IT6lU63Uk+r
+IqLwfgtXjsn02d9Tjg1PXw3B2UdD3JyZmUU3UbEnBsiB1/80hFeU26AU</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </ds:Signature>
+    </AppHdr>
+    <Document xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:camt.004.001.08">
+        <RtrAcct>
+            <MsgHdr>
+                <MsgId>9e0534a9-f595-4ad5-bdc7-f576dc081d75</MsgId>
+            </MsgHdr>
+            <RptOrErr>
+                <AcctRpt>
+                    <AcctId>
+                        <Othr>
+                            <Id>000400078911122</Id>
+                        </Othr>
+                    </AcctId>
+                    <AcctOrErr>
+                        <Acct>
+                            <Ownr>
+                                <PstlAdr/>
+                                <Id>Confidential
+
+
+                                    <PrvtId/>
+                                </Id>
+                                <CtctDtls>
+                                    <Nm>Charlie Mike</Nm>
+                                    <MobNb>2507212345678</MobNb>
+                                    <EmailAdr>charlie.mike@test.com</EmailAdr>
+                                </CtctDtls>
+                            </Ownr>
+                            <Svcr>
+                                <FinInstnId>
+                                    <Othr>
+                                        <Id>040</Id>
+                                    </Othr>
+                                </FinInstnId>
+                            </Svcr>
+                        </Acct>
+                    </AcctOrErr>
+                </AcctRpt>
+            </RptOrErr>
+        </RtrAcct>
+    </Document>
+</BusinessMessage>
