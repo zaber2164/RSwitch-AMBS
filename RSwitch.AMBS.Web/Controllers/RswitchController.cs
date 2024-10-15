@@ -1,21 +1,39 @@
 ﻿using Abp.Web.Models;
-using Asai.Ambs.RSwitch.Library;
-using Asai.Ambs.RSwitch.Library.camt;
+using RSwitch.AMBS.Library;
+using RSwitch.AMBS.Library.camt;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Dapper;
+using RSwitch.AMBS.DAL.Repositories.Implementation;
+using AutoMapper;
+using RSwitch.AMBS.Service.Implementation;
+using RSwitch_AMBS_Integration.Controllers;
+using RSwitch.AMBS.Library.pacs;
 
-namespace RSwitch_AMBS_Integration.Controllers
+namespace RSwitch.AMBS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class RswitchController : ControllerBase
     {
+        private readonly IMapper _mapper;
+        private readonly BranchService branchService;
+        private readonly ILogger<RswitchController> _logger;
+
+        public RswitchController(IMapper mapper, BranchService _branchService, ILogger<RswitchController> logger)
+        {
+            _mapper = mapper;
+            branchService = _branchService;
+            _logger = logger;
+        }
+
         [Route("[action]")]
         [HttpPost]
         [Consumes("application/xml")]
-        public async Task<IActionResult> BusinessMessage([FromBody] GetAccountLookup.BusinessMessage value)
+        public async Task<IActionResult> BusinessMessage([FromBody] ReturnAccount.BusinessMessage value)
         {
-            return Ok();
+            var branches = await branchService.GetBranchAsync();
+            return Ok(branches);
         }
         [Route("[action]")]
         [HttpPost]
@@ -25,5 +43,21 @@ namespace RSwitch_AMBS_Integration.Controllers
         {
             return Ok();
         }
+        //[HttpGet]
+        //[Route("[action]")]
+        //public decimal Divide(decimal a, decimal b)
+        //{
+        //    try
+        //    {
+        //        return (a / b);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogInformation("Error in Divide Method - Value of a is {a}", a);
+        //        _logger.LogInformation("Error in Divide Method - Value of b is {b}", b);
+        //        _logger.LogError(ex, "Error in Divide Method");
+        //        return 0;
+        //    }
+        //}
     }
 }

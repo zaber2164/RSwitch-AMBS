@@ -1,0 +1,18 @@
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03">
+    <FIToFIPmtStsReq>
+        <GrpHdr>
+            <MsgId>2345676543</MsgId>
+            <CreDtTm>2008-09-29T05:49:45</CreDtTm>
+        </GrpHdr>
+        <TxInf>
+            <OrgnlEndToEndId>12166353600534458088834911447</OrgnlEndToEndId>
+            <InstgAgt>
+                <FinInstnId>
+                    <Othr>
+                        <Id>1000</Id>
+                    </Othr>
+                </FinInstnId>
+            </InstgAgt>
+        </TxInf>
+    </FIToFIPmtStsReq>
+</Document>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Asai.Ambs.RSwitch.Library
+namespace RSwitch.AMBS.Library
 {
     public partial class note
     {

@@ -1,141 +1,148 @@
 <BusinessMessage>
-    <AppHdr xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
-        <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-            <ds:SignedInfo>
-                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsasha256"/>
-                <ds:Reference URI="#8a4eca16-45fe-4785-9694-63ed464cb241">
-                    <ds:Transforms>
-                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                    </ds:Transforms>
-                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                    <ds:DigestValue>U5dx49RQKifsQUKEc9NPvjKBwbL+w7DKcHjGe/Dh3OM=</ds:DigestValue>
-                </ds:Reference>
-                <ds:Reference URI="">
-                    <ds:Transforms>
-                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#envelopedsignature"/>Confidential
-                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                    </ds:Transforms>
-                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                    <ds:DigestValue>Z1DgKV/Vyf5zaYnJT5iiX4M5QrMaxRrfFFOr/e/9v7c=</ds:DigestValue>
-                </ds:Reference>
-                <ds:Reference>
-                    <ds:Transforms>
-                        <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                    </ds:Transforms>
-                    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                    <ds:DigestValue>yNY0KL7tEECN7nSTsuZYZSwGZTRnB4dAw34Qcpswis8=</ds:DigestValue>
-                </ds:Reference>
-            </ds:SignedInfo>
-            <ds:SignatureValue>QZ98OHwncqDr/QHgHbmoIRicpFe++yCRkkFFK+4eP36C0kvxy/bRUgJvcPwepPF+C+WKfQpA9mVr
-Vi1Vh+gGaCi6oW+6unn+eB91WL01Bt0hktesLQzvzc60HXBAO/q70SHeEMJeWCicHy17BbzMvJoK
-i5kXMKQRKg1/WTsYMdIM8c8IYunKK8HVGtpk/gWGc8JTxu/MNMct8qad6lxIeoBj7fcvqJA/oa6d
-scdVWoE0RE/Hyb3DJ98/r3VlbKyG9z2jMOqRsV1LH32tHjirv9P4Qp2CsuvduECYXX/YrB+egWUz
-NhdltfGbfTGmBM58FY2W4k6QKL3wRRkvfFjovA==</ds:SignatureValue>
-            <ds:KeyInfo Id="8a4eca16-45fe-4785-9694-63ed464cb241">
-                <ds:KeyValue>
-                    <ds:RSAKeyValue>
-                        <ds:Modulus>zjTOYvyCwXJw1l1RJjeg1qg75bVzNmBSzRRkFqXlqulvLl9guBjjjSPi6a6MwFV3Iy2NGQ1yBiG1
-zeL+UDURCUVo5kV3b6yvSfpTesBlKJesTZ+uuDi/lG9hjkPvhhzr9zrs5kbv8AH2JgKbOlzWPdDJ
-uYztJ5ORpVp8ABMXeTvgBl+nH3+uc5UM+VuZBqxRu67jjBCI8JXaLab+mYhl8MY6XZoWf+YGCAec
-9lUxlTDgvRly1mZqM4VVIi7tRbnX90ISPdrGKiEaip/mBvYHWDPGf5cgB7zLwzww9ihj2nkelJYW
-dpF1OZIdAAlu9Cld8T1o0vbuIPUC/sLtYfkYJQ==</ds:Modulus>
-                        <ds:Exponent>AQAB</ds:Exponent>
-                    </ds:RSAKeyValue>
-                </ds:KeyValue>
-                <ds:X509Data>
-                    <ds:X509Certificate>MIIDgzCCAmugAwIBAgIEYxXh7DANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJSVTEPMA0GA1UE
-CBMGTW9zY293MQ8wDQYDVQQHEwZNb3Njb3cxEzARBgNVBAoTCngtaW5mb3RlY2gxEzARBgNVBAsT
-CngtaW5mb3RlY2gxFzAVBgNVBAMTDngtaW5mb3RlY2guY29tMB4XDTE5MDYwNjEwMTkxOVoXDTIw
-MDUzMTEwMTkxOVowcjELMAkGA1UEBhMCUlUxDzANBgNVBAgTBk1vc2NvdzEPMA0GA1UEBxMGTW9z
-Y293MRMwEQYDVQQKEwp4LWluZm90ZWNoMRMwEQYDVQQLEwp4LWluZm90ZWNoMRcwFQYDVQQDEw54
-LWluZm90ZWNoLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM40zmL8gsFycNZd
-USY3oNaoO+W1czZgUs0UZBal5arpby5fYLgY440j4umujMBVdyMtjRkNcgYhtc3i/lA1EQlFaOZF
-d2+sr0n6U3rAZSiXrE2frrg4v5RvYY5D74Yc6/c67OZG7/AB9iYCmzpc1j3QybmM7SeTkaVafAAT
-F3k74AZfpx9/rnOVDPlbmQasUbuu44wQiPCV2i2m/pmIZfDGOl2aFn/mBggHnPZVMZUw4L0ZctZm
-ajOFVSIu7UW51/dCEj3axiohGoqf5gb2B1gzxn+XIAe8y8M8MPYoY9p5HpSWFnaRdTmSHQAJbvQp
-XfE9aNL27iD1Av7C7WH5GCUCAwEAAaMhMB8wHQYDVR0OBBYEFFhPwYCI/pEF99teE33ak2XzS1QE
-MA0GCSqGSIb3DQEBCwUAA4IBAQBzNuML7jIWdm5rF+9dLkZ+mwuyv7NRWXUuREdeXwD91aLjfrda
-MhjFmH15FxdyEPwOhgKf1bkbgbBYCz2qXa/eXBD3dOKYTT+BPSIcjrNtK9MvgYU7g3hKvLdognrb
-/oqUcpAwiYVimcb6veImjLRnA6fkvMjJ92fZQUWduIebsZjmIZIuYNHrNeRBmpOlYDYwcrvQUrkj
-1TGvWgzo5kvZJxqBS/ba9yiyS8RZz2PnnMML6crY8JGYrxx7stsyIbNCbx8g+/2YaoRIRKBzhJDS
-MdG3ZDQVhVzQjBadAIEdsnHbvkXiEHL6taXgdkzg2Y0pSIhXSXpVAGabhmnhTmgB</ds:X509Certificate>
-                </ds:X509Data>
-            </ds:KeyInfo>
-        </ds:Signature>
-    </AppHdr>
-    <Document xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:pacs.007.001.10">
-        <FIToFIPmtRvsl>
-            <GrpHdr>
-                <MsgId>AAAAUS29-REVERSAL/0012</MsgId>
-                <CreDtTm>2015-07-06T10:35:00</CreDtTm>
-                <NbOfTxs>1</NbOfTxs>
-                <IntrBkSttlmDt>2015-07-06</IntrBkSttlmDt>
-                <SttlmInf>Confidential
-
-
-                    <SttlmMtd>CLRG</SttlmMtd>
-                </SttlmInf>
-                <InstgAgt>
-                    <FinInstnId>
-                        <Othr>
-                            <Id>AAAAUS29</Id>
-                        </Othr>
-                    </FinInstnId>
-                </InstgAgt>
-                <InstdAgt>
-                    <FinInstnId>
-                        <Othr>
-                            <Id>ABABUS23</Id>
-                        </Othr>
-                    </FinInstnId>
-                </InstdAgt>
-            </GrpHdr>
-            <OrgnlGrpInf>
-                <OrgnlMsgId>AAAA120628-123v</OrgnlMsgId>
-                <OrgnlMsgNmId>pacs.008.001.08</OrgnlMsgNmId>
-                <OrgnlCreDtTm>2015-06-28T10:05:00</OrgnlCreDtTm>
-            </OrgnlGrpInf>
-            <TxInf>
-                <RvslId>AAAAUS29_REV2563</RvslId>
-                <OrgnlEndToEndId>VA060327/0123</OrgnlEndToEndId>
-                <OrgnlTxId>AAAAUS29/150628/ad458</OrgnlTxId>
-                <RvsdIntrBkSttlmAmt Ccy="RWF">1025</RvsdIntrBkSttlmAmt>
-                <RvsdInstdAmt Ccy="RWF">1025</RvsdInstdAmt>
-                <RvslRsnInf>
-                    <Orgtr>
-                        <Id>
-                            <OrgId>
-                                <Othr>
-                                    <Id>AAAAUS29</Id>
-                                </Othr>
-                            </OrgId>
-                        </Id>
-                    </Orgtr>
-                    <Rsn>
-                        <Cd>A000</Cd>
-                    </Rsn>
-                </RvslRsnInf>
-                <OrgnlTxRef>
-                    <MndtRltdInf>
-                        <MndtId>VIRGAY123</MndtId>
-                    </MndtRltdInf>
-                    <DbtrAcct>
-                        <Id>
-                            <Othr>
-                                <Id>123456</Id>
-                            </Othr>
-                        </Id>
-                    </DbtrAcct>
-                    <DbtrAgt>
-                        <FinInstnId>
-                            <Othr>
-                                <Id>BBBBUS39</Id>
-                            </Othr>
-                        </FinInstnId>
-                    </DbtrAgt>
-                </OrgnlTxRef>
-            </TxInf>
-        </FIToFIPmtRvsl>
-    </Document>
+	<AppHdr xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+		<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<ds:SignedInfo>
+				<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+				<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsasha256"/>
+				<ds:Reference URI="#8a4eca16-45fe-4785-9694-63ed464cb241">
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ds:DigestValue>U5dx49RQKifsQUKEc9NPvjKBwbL+w7DKcHjGe/Dh3OM=</ds:DigestValue>
+				</ds:Reference>
+				<ds:Reference URI="">
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#envelopedsignature"/>Confidential
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ds:DigestValue>Z1DgKV/Vyf5zaYnJT5iiX4M5QrMaxRrfFFOr/e/9v7c=</ds:DigestValue>
+				</ds:Reference>
+				<ds:Reference URI="">
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ds:DigestValue>yNY0KL7tEECN7nSTsuZYZSwGZTRnB4dAw34Qcpswis8=</ds:DigestValue>
+				</ds:Reference>
+			</ds:SignedInfo>
+			<ds:SignatureValue>
+				QZ98OHwncqDr/QHgHbmoIRicpFe++yCRkkFFK+4eP36C0kvxy/bRUgJvcPwepPF+C+WKfQpA9mVr
+				Vi1Vh+gGaCi6oW+6unn+eB91WL01Bt0hktesLQzvzc60HXBAO/q70SHeEMJeWCicHy17BbzMvJoK
+				i5kXMKQRKg1/WTsYMdIM8c8IYunKK8HVGtpk/gWGc8JTxu/MNMct8qad6lxIeoBj7fcvqJA/oa6d
+				scdVWoE0RE/Hyb3DJ98/r3VlbKyG9z2jMOqRsV1LH32tHjirv9P4Qp2CsuvduECYXX/YrB+egWUz
+				NhdltfGbfTGmBM58FY2W4k6QKL3wRRkvfFjovA==
+			</ds:SignatureValue>
+			<ds:KeyInfo Id="8a4eca16-45fe-4785-9694-63ed464cb241">
+				<ds:KeyValue>
+					<ds:RSAKeyValue>
+						<ds:Modulus>
+							zjTOYvyCwXJw1l1RJjeg1qg75bVzNmBSzRRkFqXlqulvLl9guBjjjSPi6a6MwFV3Iy2NGQ1yBiG1
+							zeL+UDURCUVo5kV3b6yvSfpTesBlKJesTZ+uuDi/lG9hjkPvhhzr9zrs5kbv8AH2JgKbOlzWPdDJ
+							uYztJ5ORpVp8ABMXeTvgBl+nH3+uc5UM+VuZBqxRu67jjBCI8JXaLab+mYhl8MY6XZoWf+YGCAec
+							9lUxlTDgvRly1mZqM4VVIi7tRbnX90ISPdrGKiEaip/mBvYHWDPGf5cgB7zLwzww9ihj2nkelJYW
+							dpF1OZIdAAlu9Cld8T1o0vbuIPUC/sLtYfkYJQ==
+						</ds:Modulus>
+						<ds:Exponent>AQAB</ds:Exponent>
+					</ds:RSAKeyValue>
+				</ds:KeyValue>
+				<ds:X509Data>
+					<ds:X509Certificate>
+						MIIDgzCCAmugAwIBAgIEYxXh7DANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJSVTEPMA0GA1UE
+						CBMGTW9zY293MQ8wDQYDVQQHEwZNb3Njb3cxEzARBgNVBAoTCngtaW5mb3RlY2gxEzARBgNVBAsT
+						CngtaW5mb3RlY2gxFzAVBgNVBAMTDngtaW5mb3RlY2guY29tMB4XDTE5MDYwNjEwMTkxOVoXDTIw
+						MDUzMTEwMTkxOVowcjELMAkGA1UEBhMCUlUxDzANBgNVBAgTBk1vc2NvdzEPMA0GA1UEBxMGTW9z
+						Y293MRMwEQYDVQQKEwp4LWluZm90ZWNoMRMwEQYDVQQLEwp4LWluZm90ZWNoMRcwFQYDVQQDEw54
+						LWluZm90ZWNoLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM40zmL8gsFycNZd
+						USY3oNaoO+W1czZgUs0UZBal5arpby5fYLgY440j4umujMBVdyMtjRkNcgYhtc3i/lA1EQlFaOZF
+						d2+sr0n6U3rAZSiXrE2frrg4v5RvYY5D74Yc6/c67OZG7/AB9iYCmzpc1j3QybmM7SeTkaVafAAT
+						F3k74AZfpx9/rnOVDPlbmQasUbuu44wQiPCV2i2m/pmIZfDGOl2aFn/mBggHnPZVMZUw4L0ZctZm
+						ajOFVSIu7UW51/dCEj3axiohGoqf5gb2B1gzxn+XIAe8y8M8MPYoY9p5HpSWFnaRdTmSHQAJbvQp
+						XfE9aNL27iD1Av7C7WH5GCUCAwEAAaMhMB8wHQYDVR0OBBYEFFhPwYCI/pEF99teE33ak2XzS1QE
+						MA0GCSqGSIb3DQEBCwUAA4IBAQBzNuML7jIWdm5rF+9dLkZ+mwuyv7NRWXUuREdeXwD91aLjfrda
+						MhjFmH15FxdyEPwOhgKf1bkbgbBYCz2qXa/eXBD3dOKYTT+BPSIcjrNtK9MvgYU7g3hKvLdognrb
+						/oqUcpAwiYVimcb6veImjLRnA6fkvMjJ92fZQUWduIebsZjmIZIuYNHrNeRBmpOlYDYwcrvQUrkj
+						1TGvWgzo5kvZJxqBS/ba9yiyS8RZz2PnnMML6crY8JGYrxx7stsyIbNCbx8g+/2YaoRIRKBzhJDS
+						MdG3ZDQVhVzQjBadAIEdsnHbvkXiEHL6taXgdkzg2Y0pSIhXSXpVAGabhmnhTmgB
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</ds:Signature>
+	</AppHdr>
+	<Document xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:pacs.007.001.10">
+		<FIToFIPmtRvsl>
+			<GrpHdr>
+				<MsgId>AAAAUS29-REVERSAL/0012</MsgId>
+				<CreDtTm>2015-07-06T10:35:00</CreDtTm>
+				<NbOfTxs>1</NbOfTxs>
+				<IntrBkSttlmDt>2015-07-06</IntrBkSttlmDt>
+				<SttlmInf>
+					Confidential
+					<SttlmMtd>CLRG</SttlmMtd>
+				</SttlmInf>
+				<InstgAgt>
+					<FinInstnId>
+						<Othr>
+							<Id>AAAAUS29</Id>
+						</Othr>
+					</FinInstnId>
+				</InstgAgt>
+				<InstdAgt>
+					<FinInstnId>
+						<Othr>
+							<Id>ABABUS23</Id>
+						</Othr>
+					</FinInstnId>
+				</InstdAgt>
+			</GrpHdr>
+			<OrgnlGrpInf>
+				<OrgnlMsgId>AAAA120628-123v</OrgnlMsgId>
+				<OrgnlMsgNmId>pacs.008.001.08</OrgnlMsgNmId>
+				<OrgnlCreDtTm>2015-06-28T10:05:00</OrgnlCreDtTm>
+			</OrgnlGrpInf>
+			<TxInf>
+				<RvslId>AAAAUS29_REV2563</RvslId>
+				<OrgnlEndToEndId>VA060327/0123</OrgnlEndToEndId>
+				<OrgnlTxId>AAAAUS29/150628/ad458</OrgnlTxId>
+				<RvsdIntrBkSttlmAmt Ccy="RWF">1025</RvsdIntrBkSttlmAmt>
+				<RvsdInstdAmt Ccy="RWF">1025</RvsdInstdAmt>
+				<RvslRsnInf>
+					<Orgtr>
+						<Id>
+							<OrgId>
+								<Othr>
+									<Id>AAAAUS29</Id>
+								</Othr>
+							</OrgId>
+						</Id>
+					</Orgtr>
+					<Rsn>
+						<Cd>A000</Cd>
+					</Rsn>
+				</RvslRsnInf>
+				<OrgnlTxRef>
+					<MndtRltdInf>
+						<MndtId>VIRGAY123</MndtId>
+					</MndtRltdInf>
+					<DbtrAcct>
+						<Id>
+							<OrgId>
+								<Othr>
+									<Id>123456</Id>
+								</Othr>
+							</OrgId>
+						</Id>
+					</DbtrAcct>
+					<DbtrAgt>
+						<FinInstnId>
+							<Othr>
+								<Id>BBBBUS39</Id>
+							</Othr>
+						</FinInstnId>
+					</DbtrAgt>
+				</OrgnlTxRef>
+			</TxInf>
+		</FIToFIPmtRvsl>
+	</Document>
 </BusinessMessage>

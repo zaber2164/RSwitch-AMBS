@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Asai.Ambs.RSwitch.Library.pacs
+namespace RSwitch.AMBS.Library.pacs
 {
     public class CreditTransfer
     {
@@ -29,25 +30,25 @@ namespace Asai.Ambs.RSwitch.Library.pacs
 
         public class Signature
         {
-            [XmlElement(ElementName = "SignedInfo")]
+            [XmlElement(ElementName = "SignedInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public SignedInfo SignedInfo { get; set; }
 
-            [XmlElement(ElementName = "SignatureValue")]
+            [XmlElement(ElementName = "SignatureValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public string SignatureValue { get; set; }
 
-            [XmlElement(ElementName = "KeyInfo")]
+            [XmlElement(ElementName = "KeyInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public KeyInfo KeyInfo { get; set; }
         }
 
         public class SignedInfo
         {
-            [XmlElement(ElementName = "CanonicalizationMethod")]
+            [XmlElement(ElementName = "CanonicalizationMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public CanonicalizationMethod CanonicalizationMethod { get; set; }
 
-            [XmlElement(ElementName = "SignatureMethod")]
+            [XmlElement(ElementName = "SignatureMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public SignatureMethod SignatureMethod { get; set; }
 
-            [XmlElement(ElementName = "Reference")]
+            [XmlElement(ElementName = "Reference", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public List<Reference> Reference { get; set; }
         }
 
@@ -66,21 +67,21 @@ namespace Asai.Ambs.RSwitch.Library.pacs
         public class Reference
         {
             [XmlAttribute(AttributeName = "URI")]
-            public string URI { get; set; }
+            public string? URI { get; set; }
 
-            [XmlElement(ElementName = "Transforms")]
+            [XmlElement(ElementName = "Transforms", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public Transforms Transforms { get; set; }
 
-            [XmlElement(ElementName = "DigestMethod")]
+            [XmlElement(ElementName = "DigestMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public DigestMethod DigestMethod { get; set; }
 
-            [XmlElement(ElementName = "DigestValue")]
+            [XmlElement(ElementName = "DigestValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public string DigestValue { get; set; }
         }
 
         public class Transforms
         {
-            [XmlElement(ElementName = "Transform")]
+            [XmlElement(ElementName = "Transform", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public List<Transform> Transform { get; set; }
         }
 
@@ -101,37 +102,37 @@ namespace Asai.Ambs.RSwitch.Library.pacs
             [XmlAttribute(AttributeName = "Id")]
             public string Id { get; set; }
 
-            [XmlElement(ElementName = "KeyValue")]
+            [XmlElement(ElementName = "KeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public KeyValue KeyValue { get; set; }
 
-            [XmlElement(ElementName = "X509Data")]
+            [XmlElement(ElementName = "X509Data", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public X509Data X509Data { get; set; }
         }
 
         public class KeyValue
         {
-            [XmlElement(ElementName = "RSAKeyValue")]
+            [XmlElement(ElementName = "RSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public RSAKeyValue RSAKeyValue { get; set; }
         }
 
         public class RSAKeyValue
         {
-            [XmlElement(ElementName = "Modulus")]
+            [XmlElement(ElementName = "Modulus", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public string Modulus { get; set; }
 
-            [XmlElement(ElementName = "Exponent")]
+            [XmlElement(ElementName = "Exponent", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public string Exponent { get; set; }
         }
 
         public class X509Data
         {
-            [XmlElement(ElementName = "X509Certificate")]
+            [XmlElement(ElementName = "X509Certificate", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
             public string X509Certificate { get; set; }
         }
 
         public class Document
         {
-            [XmlElement(ElementName = "FIToFICstmrCdtTrf")]
+            [XmlElement(ElementName = "FIToFICstmrCdtTrf", Namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08")]
             public FIToFICstmrCdtTrf FIToFICstmrCdtTrf { get; set; }
         }
 
@@ -150,7 +151,7 @@ namespace Asai.Ambs.RSwitch.Library.pacs
             public string MsgId { get; set; }
 
             [XmlElement(ElementName = "CreDtTm")]
-            public DateTime CreDtTm { get; set; }
+            public string CreDtTm { get; set; }
 
             [XmlElement(ElementName = "NbOfTxs")]
             public int NbOfTxs { get; set; }
@@ -207,7 +208,7 @@ namespace Asai.Ambs.RSwitch.Library.pacs
             public IntrBkSttlmAmt IntrBkSttlmAmt { get; set; }
 
             [XmlElement(ElementName = "IntrBkSttlmDt")]
-            public DateTime IntrBkSttlmDt { get; set; }
+            public string IntrBkSttlmDt { get; set; }
 
             [XmlElement(ElementName = "ChrgBr")]
             public string ChrgBr { get; set; }
@@ -254,14 +255,8 @@ namespace Asai.Ambs.RSwitch.Library.pacs
 
         public class PmtTpInf
         {
-            [XmlElement(ElementName = "CtgyPurp")]
-            public CtgyPurp CtgyPurp { get; set; }
-        }
-
-        public class CtgyPurp
-        {
-            [XmlElement(ElementName = "Cd")]
-            public string Cd { get; set; }
+            [XmlElement(ElementName = "InstrPrty")]
+            public string? InstrPrty { get; set; }
         }
 
         public class IntrBkSttlmAmt
@@ -277,21 +272,6 @@ namespace Asai.Ambs.RSwitch.Library.pacs
         {
             [XmlElement(ElementName = "Nm")]
             public string Nm { get; set; }
-
-            [XmlElement(ElementName = "Id")]
-            public Id Id { get; set; }
-        }
-
-        public class Id
-        {
-            [XmlElement(ElementName = "OrgId")]
-            public OrgId OrgId { get; set; }
-        }
-
-        public class OrgId
-        {
-            [XmlElement(ElementName = "Othr")]
-            public Othr Othr { get; set; }
         }
 
         public class Dbtr
@@ -340,6 +320,12 @@ namespace Asai.Ambs.RSwitch.Library.pacs
         {
             [XmlElement(ElementName = "Ustrd")]
             public string Ustrd { get; set; }
+        }
+
+        public class Id
+        {
+            [XmlElement(ElementName = "Othr")]
+            public Othr Othr { get; set; }
         }
 
     }

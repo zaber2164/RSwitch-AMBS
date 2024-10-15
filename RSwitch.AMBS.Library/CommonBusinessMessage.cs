@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Asai.Ambs.RSwitch.Library
+namespace RSwitch.AMBS.Library
 {
     public class CommonBusinessMessage
     {

@@ -1,0 +1,96 @@
+<!--pacs.002.001.10 Payment Status Report Reject-->
+<BusinessMessage>
+	<AppHdr
+		xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+		<ds:Signature
+			xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<ds:SignedInfo>
+				<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+				<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+				<ds:Reference URI="#645a4ac2-f0eb-4491-8070-83d890f1caf2">
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ds:DigestValue>6Symj9kxjsatMGU9v0Q+WfhHNGS4Q1T5dNFb9da6nYo=</ds:DigestValue>
+				</ds:Reference>
+				<ds:Reference URI="">
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ds:DigestValue>Z1DgKV/Vyf5zaYnJT5iiX4M5QrMaxRrfFFOr/e/9v7c=</ds:DigestValue>
+				</ds:Reference>
+				<ds:Reference>
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ds:DigestValue>ywB4SMNCq0aVj8Rzn11MoJdwVGDYUz6RwuWUP/GXjkE=</ds:DigestValue>
+				</ds:Reference>
+			</ds:SignedInfo>
+			<ds:SignatureValue>
+				G+sic791AasETcn9WpxDu1qwZ9ENcCHwqS+0WAqDHzdc3RgUmgtjxGCJqkBfrlnTBA9WR2FnV2ep
+				pklY1OtoPsl7SgaDng+JlSuzdC5/KpbmJeTJIFPR03O2b5VYxmVHQ4kE4yEt0K6aMGgfHusrojwI
+				YyBV2mxlHwHB0TyNzOU2aCkYRR9U7D/Ye2CTOVdFf8UKsSmquONCyZ7M+5+giByae9VvrKT6R+9B
+				FAtpkly/kNHBjtOAbwQQLpMeyzqIt/mRQ5wGZm5qBAYYP71j/rmraZULUpMSpypdZezUHY/EKC3z
+				08RC6rCo6OIX6SpvyZdvtE/ANgql3t0FJBmjMg==
+			</ds:SignatureValue>
+			<ds:KeyInfo Id="645a4ac2-f0eb-4491-8070-83d890f1caf2">
+				<ds:KeyValue>
+					<ds:RSAKeyValue>
+						<ds:Modulus>
+							3FArd3r8nUyd4/mydPxTF6CKdotl0IcQt9mU2dZhQ7ooQfToJExXMEVh0KT97rm/RhERoSw5kAdi
+							9gA6y6TPuveMlaoP484klN1t5ngx1x4s7lDjar1FlrrxZemXbtnbIWyaqYBXtzP9ByCgbO+aCZ+w
+							uSfS/+5BA2RzlFW/uIEAmnwlbyhti2EV6RU3ujRjf2qAKJMawGsaHNe0DOS6afFqUL5I7tFSSu3V
+							VVM36l8XDJbjywaP9ojcCxJmTBF9FRYvNTBHlALb9dbBzLDbfeqHbUfLtyeJExUEgLr2+cACgQ3N
+							czw0FAY8B629RSeK3IBMGVqHzcBGC4qzkbf5hQ==
+						</ds:Modulus>
+						<ds:Exponent>AQAB</ds:Exponent>
+					</ds:RSAKeyValue>
+				</ds:KeyValue>
+				<ds:X509Data>
+					Confidential
+
+
+
+					<ds:X509Certificate>
+						MIID7zCCAtegAwIBAgIBBDANBgkqhkiG9w0BAQsFADCBjDELMAkGA1UEBhMCUlcxDzANBgNVBAgT
+						BktpZ2FsaTELMAkGA1UEBxMCUlcxEDAOBgNVBAoTB1JTd2l0Y2gxDzANBgNVBAsTBlItTkRQUzEW
+						MBQGA1UEAxMNUi1ORFBTIFNVQiBDQTEkMCIGCSqGSIb3DQEJARYVaW5mb3NlY0Byc3dpdGNoLmNv
+						LnJ3MB4XDTE5MDEwMTEzMjYwMFoXDTI5MDEwMTEzMjYwMFowgYkxCzAJBgNVBAYTAlJXMQ8wDQYD
+						VQQIEwZLaWdhbGkxCzAJBgNVBAcTAlJXMRAwDgYDVQQKEwdSU3dpdGNoMQ8wDQYDVQQLEwZSLU5E
+						UFMxEzARBgNVBAMTClItTkRQUyBQR1cxJDAiBgkqhkiG9w0BCQEWFWluZm9zZWNAcnN3aXRjaC5j
+						by5ydzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANxQK3d6/J1MneP5snT8UxeginaL
+						ZdCHELfZlNnWYUO6KEH06CRMVzBFYdCk/e65v0YREaEsOZAHYvYAOsukz7r3jJWqD+POJJTdbeZ4
+						MdceLO5Q42q9RZa68WXpl27Z2yFsmqmAV7cz/QcgoGzvmgmfsLkn0v/uQQNkc5RVv7iBAJp8JW8o
+						bYthFekVN7o0Y39qgCiTGsBrGhzXtAzkumnxalC+SO7RUkrt1VVTN+pfFwyW48sGj/aI3AsSZkwR
+						fRUWLzUwR5QC2/XWwcyw233qh21Hy7cniRMVBIC69vnAAoENzXM8NBQGPAetvUUnityATBlah83A
+						RguKs5G3+YUCAwEAAaNdMFswDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUmkiJWrn4Rb2XcqjdsYcQ
+						Uvml/4wwHwYDVR0jBBgwFoAUED/a4yWl3w1SfYJmVdKsPof+wyIwCwYDVR0PBAQDAgeAMA0GCSqG
+						SIb3DQEBCwUAA4IBAQANG3GbMsjX9I4dNe7YIyhv6YzeDIOgq07KdHm0cv9nFBQ0SpX4Zhx/7xRL
+						OTuY+vjH68qUXp+cJ18D+LBOOBuO6CyTO8I/9E4ynHEmLP6WOBbok6Qpsq5qsTwgXjcBC1PI37oT
+						ref0XpDUgBcMZcEXScwfD3g6cpxkx2qO4pSDYFm00zs+4/I0/ts9DQmEnza9+/kwAZkugTWV2cjd
+						cMStohl4x5pui8IYkqTwyDch6D7Q6UbAVJUEkFJHaGFweP7OKW9Tsyqm/YjuYWqF1IT6lU63Uk+r
+						IqLwfgtXjsn02d9Tjg1PXw3B2UdD3JyZmUU3UbEnBsiB1/80hFeU26AU
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</ds:Signature>
+	</AppHdr>
+	<Document
+		xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.002.001.10">
+		<FIToFIPmtStsRpt>
+			<GrpHdr>
+				<MsgId>ee39c54d-3a97-4a7c-b51e-4a564bea0ce5</MsgId>
+				<CreDtTm>2019-10-09T07:26:15.097Z</CreDtTm>
+			</GrpHdr>
+			<TxInfAndSts>
+				<StsId>RJCT</StsId>
+				<OrgnlEndToEndId>ABC/1313/2019-06-12</OrgnlEndToEndId>
+				<OrgnlTxId>BBBB/190612-CCT/130/13</OrgnlTxId>
+			</TxInfAndSts>
+		</FIToFIPmtStsRpt>
+	</Document>
+</BusinessMessage>

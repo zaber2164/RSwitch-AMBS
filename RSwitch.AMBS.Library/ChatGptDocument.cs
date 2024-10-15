@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Asai.Ambs.RSwitch.Library
+namespace RSwitch.AMBS.Library
 {
     //[XmlRoot(ElementName = "Document", Namespace = "urn:iso:std:iso:20022:tech:xsd:camt.003.001.07")]
     public class Document

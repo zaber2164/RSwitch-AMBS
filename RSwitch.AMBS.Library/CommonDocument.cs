@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Asai.Ambs.RSwitch.Library
+namespace RSwitch.AMBS.Library
 {
 
     //// NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
