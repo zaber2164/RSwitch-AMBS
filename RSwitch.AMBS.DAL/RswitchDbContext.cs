@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RSwitch.AMBS.Model.User;
 using System.Reflection;
 
 namespace RSwitch.AMBS.DAL
@@ -10,7 +11,7 @@ namespace RSwitch.AMBS.DAL
 
         }
         //tables
-        //public DbSet<User> Users { get; set; }
+        public DbSet<LoginUser> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

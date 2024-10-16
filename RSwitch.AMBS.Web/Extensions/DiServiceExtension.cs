@@ -4,6 +4,11 @@ using RSwitch.AMBS.DAL.Repositories.Interface;
 using RSwitch.AMBS.DAL.Repositories.Implementation;
 using RSwitch.AMBS.Utility;
 using RSwitch.AMBS.Service.Implementation;
+using RSwitch.AMBS.Service.Interface.User;
+using RSwitch.AMBS.Service.Implementation.User;
+using RSwitch.AMBS.DAL.Repositories.Interface.User;
+using RSwitch.AMBS.DAL.Repositories.Implementation.User;
+using RSwitch.AMBS.DAL.ConfigurationManager;
 
 namespace RSwitch.AMBS.Web.Extensions
 {
@@ -30,12 +35,16 @@ namespace RSwitch.AMBS.Web.Extensions
                 .AddSingleton<IApplicationConfigurationManager, ApplicationConfigurationManager>()
                 .AddScoped(typeof(IRepository<>), typeof(Repository<>))
 
-                .AddScoped<IBranchRepository, BranchRepository>();
+                .AddScoped<IBranchRepository, BranchRepository>()
+                .AddScoped<IAuthRepository, AuthRepository>()
+                .AddScoped<IUserRepository, UserRepository>();
         }
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<BranchService, BranchService>();
+                .AddScoped<BranchService, BranchService>()
+                .AddScoped<IAuthService, AuthService>()
+                .AddScoped<IUserService, UserService>();
         }
     }
 }

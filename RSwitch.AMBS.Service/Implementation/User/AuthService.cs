@@ -74,8 +74,8 @@ namespace RSwitch.AMBS.Service.Implementation.User
             user.AccessTokenLifeTimeDuration = int.Parse(_configuration["Jwt:ExpiryMinutes"]);
             //user.IsMfaEnabled = user.Is2FAFingerEnabled && DBUtility.ToNullableDateTime((await _configService.GetConfiguration(ConfigKeys.FACE_RECOGNITION_APPLICABLE_DATE)).Value) <= DateTime.Now;
 
-            await UpdateUserRefreshToken(request.Login, user.RefreshToken, user.RefreshTokenExpiryDate);
-            await _unitOfWork.CommitAsync();
+            //await UpdateUserRefreshToken(request.Login, user.RefreshToken, user.RefreshTokenExpiryDate);
+            //await _unitOfWork.CommitAsync();
 
             return new LoginPostResponseDTO(0, true, "Login successful", user);
         }
@@ -117,27 +117,39 @@ namespace RSwitch.AMBS.Service.Implementation.User
         }
         private string GenerateJwtToken(LoginResponseDTO request)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            try
+            {
+                var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+                var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var claims = new List<Claim>()
+                var claims = new List<Claim>()
             {
                 new Claim(JwtRegisteredClaimNames.Sub, request.Login),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.Name,request.Login)
             };
-            //claims.AddRange(request.UserRoles.Select(role => new Claim(ClaimTypes.Role, role.RoleName)));
+                //claims.AddRange(request.UserRoles.Select(role => new Claim(ClaimTypes.Role, role.RoleName)));
 
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Issuer"],
-                claims: claims,
-                expires: DateTime.Now.AddMinutes(int.Parse(_configuration["Jwt:ExpiryMinutes"])),
-                signingCredentials: credentials
-            );
+                var token = new JwtSecurityToken(
+                    issuer: _configuration["Jwt:Issuer"],
+                    audience: _configuration["Jwt:Issuer"],
+                    claims: claims,
+                    expires: DateTime.Now.AddMinutes(int.Parse(_configuration["Jwt:ExpiryMinutes"])),
+                    signingCredentials: credentials
+                );
 
-            var encodedToken = new JwtSecurityTokenHandler().WriteToken(token);
-            return encodedToken;
+                var encodedToken = new JwtSecurityTokenHandler().WriteToken(token);
+                return encodedToken;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                
+            }            
         }
 
         private ClaimsPrincipal GetPrincipalFromExpiredToken(string token)

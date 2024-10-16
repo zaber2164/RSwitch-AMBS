@@ -9,6 +9,7 @@ using AutoMapper;
 using RSwitch.AMBS.Service.Implementation;
 using RSwitch_AMBS_Integration.Controllers;
 using RSwitch.AMBS.Library.pacs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RSwitch.AMBS.Controllers
 {
@@ -30,7 +31,8 @@ namespace RSwitch.AMBS.Controllers
         [Route("[action]")]
         [HttpPost]
         [Consumes("application/xml")]
-        public async Task<IActionResult> BusinessMessage([FromBody] ReturnAccount.BusinessMessage value)
+        [Authorize]
+        public async Task<IActionResult> BusinessMessage([FromBody] GetAccountLookup.BusinessMessage value)
         {
             var branches = await branchService.GetBranchAsync();
             return Ok(branches);

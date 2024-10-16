@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RSwitch.AMBS.Model.User
 {
@@ -24,9 +25,11 @@ namespace RSwitch.AMBS.Model.User
         public long? HRM_EmployeeId {get;set;}
         public string PasswordHistory {get;set;}
         public bool Is2FAFingerEnabled { get;set;}
+        [NotMapped]
         public bool? IsEmailOTPEnabled {get;set;}
+        [NotMapped]
         public bool? IsSmslOTPEnabled {get;set;}
-        public string RefreshToken { get; set; }
+        public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryDate { get; set; }
 
 
