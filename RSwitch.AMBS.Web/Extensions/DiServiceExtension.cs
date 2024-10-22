@@ -4,6 +4,15 @@ using RSwitch.AMBS.DAL.Repositories.Interface;
 using RSwitch.AMBS.DAL.Repositories.Implementation;
 using RSwitch.AMBS.Utility;
 using RSwitch.AMBS.Service.Implementation;
+using RSwitch.AMBS.Service.Interface.User;
+using RSwitch.AMBS.Service.Implementation.User;
+using RSwitch.AMBS.DAL.Repositories.Interface.User;
+using RSwitch.AMBS.DAL.Repositories.Implementation.User;
+using RSwitch.AMBS.DAL.ConfigurationManager;
+using RSwitch.AMBS.Model.DTO.Auth;
+using RSwitch.AMBS.Validation;
+using FluentValidation;
+using RSwitch.AMBS.Service.Interface;
 
 namespace RSwitch.AMBS.Web.Extensions
 {
@@ -30,12 +39,21 @@ namespace RSwitch.AMBS.Web.Extensions
                 .AddSingleton<IApplicationConfigurationManager, ApplicationConfigurationManager>()
                 .AddScoped(typeof(IRepository<>), typeof(Repository<>))
 
-                .AddScoped<IBranchRepository, BranchRepository>();
+                .AddScoped<IBranchRepository, BranchRepository>()
+                .AddScoped<IAuthRepository, AuthRepository>()
+                .AddScoped<IUserRepository, UserRepository>();
         }
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<BranchService, BranchService>();
+                .AddScoped<IBranchService, BranchService>()
+                .AddScoped<IAuthService, AuthService>()
+                .AddScoped<IUserService, UserService>();
+        }
+        public static IServiceCollection AddFluentValidators(this IServiceCollection services)
+        {
+            return services
+                .AddScoped<IValidator<LoginRequestDTO>, LoginRequestValidator>();
         }
     }
 }

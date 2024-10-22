@@ -14,15 +14,26 @@ namespace RSwitch.AMBS.DAL.Repositories.Implementation.User
         }
         public async Task<LoginUser> Authenticate(string userId, string password)
         {
-            var loginDetails = await DbSet.FirstOrDefaultAsync(x => x.Login.ToLower().Trim() == userId.ToLower().Trim());
-            if (loginDetails != null)
+            try
             {
-                var isValidUser = await ValidateUser(loginDetails, password);
-                return isValidUser ? loginDetails : null;
+                var loginDetails = await DbSet.FirstOrDefaultAsync(x => x.Login.ToLower().Trim() == userId.ToLower().Trim());
+                //var loginDetails = await GetAsync("SELECT * FROM [User]", false);
+                if (loginDetails != null)
+                {
+                    //var isValidUser = await ValidateUser(loginDetails, password);
+                    //return isValidUser ? loginDetails : null;
+                    //return loginDetails.FirstOrDefault();
+                    return loginDetails;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (Exception)
             {
-                return null;
+
+                throw;
             }
         }
 

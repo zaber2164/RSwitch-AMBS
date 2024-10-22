@@ -4,6 +4,7 @@ namespace RSwitch_AMBS_Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Obsolete]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

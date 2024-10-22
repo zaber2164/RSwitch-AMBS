@@ -1,10 +1,11 @@
 ﻿using Dapper;
 using RSwitch.AMBS.DAL.Repositories.Interface;
 using RSwitch.AMBS.Model.View;
+using RSwitch.AMBS.Service.Interface;
 
 namespace RSwitch.AMBS.Service.Implementation
 {
-    public class BranchService //: IBranchService
+    public class BranchService : IBranchService
     {
         private readonly IBranchRepository _branchRepository;
 

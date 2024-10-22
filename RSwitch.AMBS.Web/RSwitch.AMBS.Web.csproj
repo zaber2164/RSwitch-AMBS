@@ -30,6 +30,7 @@
     <ProjectReference Include="..\RSwitch.AMBS.Model\RSwitch.AMBS.Model.csproj" />
     <ProjectReference Include="..\RSwitch.AMBS.Service\RSwitch.AMBS.Service.csproj" />
     <ProjectReference Include="..\RSwitch.AMBS.Utility\RSwitch.AMBS.Utility.csproj" />
+    <ProjectReference Include="..\RSwitch.AMBS.Validation\RSwitch.AMBS.Validation.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSwitch.AMBS.Model", "RSwit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSwitch.AMBS.Service", "RSwitch.AMBS.Service\RSwitch.AMBS.Service.csproj", "{6E3A6E92-9DB5-4425-8973-FD3CADD78DA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSwitch.AMBS.Validation", "RSwitch.AMBS.Validation\RSwitch.AMBS.Validation.csproj", "{9B3E65A0-6AF0-471C-9733-BAF4B5BB1194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSwitch.AMBS.Validation", "RSwitch.AMBS.Validation\RSwitch.AMBS.Validation.csproj", "{9B3E65A0-6AF0-471C-9733-BAF4B5BB1194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSwitch.AMBS.UnitTest", "RSwitch.AMBS.UnitTest\RSwitch.AMBS.UnitTest.csproj", "{5CB5E056-CB69-4678-ADC9-E1F9FEC5A6C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{9B3E65A0-6AF0-471C-9733-BAF4B5BB1194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3E65A0-6AF0-471C-9733-BAF4B5BB1194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3E65A0-6AF0-471C-9733-BAF4B5BB1194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB5E056-CB69-4678-ADC9-E1F9FEC5A6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB5E056-CB69-4678-ADC9-E1F9FEC5A6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB5E056-CB69-4678-ADC9-E1F9FEC5A6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB5E056-CB69-4678-ADC9-E1F9FEC5A6C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

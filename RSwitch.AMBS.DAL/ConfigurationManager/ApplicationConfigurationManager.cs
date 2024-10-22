@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using RSwitch.AMBS.Utility;
 
-namespace RSwitch.AMBS.DAL.Repositories.Implementation
+namespace RSwitch.AMBS.DAL.ConfigurationManager
 {
     public class ApplicationConfigurationManager: IApplicationConfigurationManager
     {

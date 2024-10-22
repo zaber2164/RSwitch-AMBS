@@ -9,6 +9,9 @@ using AutoMapper;
 using RSwitch.AMBS.Service.Implementation;
 using RSwitch_AMBS_Integration.Controllers;
 using RSwitch.AMBS.Library.pacs;
+using Microsoft.AspNetCore.Authorization;
+using RSwitch.AMBS.Model.View;
+using RSwitch.AMBS.Service.Interface;
 
 namespace RSwitch.AMBS.Controllers
 {
@@ -17,10 +20,10 @@ namespace RSwitch.AMBS.Controllers
     public class RswitchController : ControllerBase
     {
         private readonly IMapper _mapper;
-        private readonly BranchService branchService;
+        private readonly IBranchService branchService;
         private readonly ILogger<RswitchController> _logger;
 
-        public RswitchController(IMapper mapper, BranchService _branchService, ILogger<RswitchController> logger)
+        public RswitchController(IMapper mapper, IBranchService _branchService, ILogger<RswitchController> logger)
         {
             _mapper = mapper;
             branchService = _branchService;
@@ -30,7 +33,8 @@ namespace RSwitch.AMBS.Controllers
         [Route("[action]")]
         [HttpPost]
         [Consumes("application/xml")]
-        public async Task<IActionResult> BusinessMessage([FromBody] ReturnAccount.BusinessMessage value)
+        [Authorize]
+        public async Task<ActionResult<IEnumerable< BranchView>>> BusinessMessage([FromBody] GetAccountLookup.BusinessMessage value)
         {
             var branches = await branchService.GetBranchAsync();
             return Ok(branches);
