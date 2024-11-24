@@ -2,8 +2,10 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using RSwitch.AMBS.Utility;
 using RSwitch.AMBS.Web.Extensions;
 using Serilog;
+using Serilog.Sinks.MSSqlServer;
 using System.Reflection;
 using System.Text;
 
@@ -72,9 +74,23 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                         ClockSkew = TimeSpan.Zero
                     };
                 });
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+var encryptedConnectionString = configuration.GetConnectionString("DefaultConnection");
+var decryptedConnectionString = UIUtility.DecryptConnectionString(encryptedConnectionString);
+// Configure Serilog to use the decrypted connection string
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(configuration)
+    .WriteTo.MSSqlServer(
+        connectionString: decryptedConnectionString,
+        sinkOptions: new MSSqlServerSinkOptions { TableName = "LogEventsSerilog", AutoCreateSqlTable = true }
+    )
+    .CreateLogger();
 builder.Services.AddAutoMapper(typeof(Program));
-builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
-    loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
+//builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
+//    loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
